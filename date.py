@@ -68,8 +68,8 @@ for i in (3,2,1,0):
 #print(out)		
 month_feb='02'
 month_odd=['01','03','05','07','08','10','12']
-print(out)
-print(out[3])
+#print(out)
+#print(out[3])
 if out[3]=='3' and out[0:2]!=month_feb:
 	for i in (1,0):
 		if i in fifth:
@@ -105,7 +105,7 @@ else:
 			fifth.pop(position)
 			sixth=fifth
 			break
-print(out)
+#print(out)
 #print(sixth)
 
 for i in (2,1,0):

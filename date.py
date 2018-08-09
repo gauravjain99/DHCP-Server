@@ -66,15 +66,47 @@ for i in (3,2,1,0):
 		fifth=fourth
 		break
 #print(out)		
-for i in (0,9,8,7,6,5,4,3,2,1):
-	if i in fifth:
-		position=fifth.index(i)
-		out=out+str(i)+" "
-		fifth.pop(position)
-		sixth=fifth
-		break
+month_feb='02'
+month_odd=['01','03','05','07','08','10','12']
+print(out)
+print(out[3])
+if out[3]=='3' and out[0:2]!=month_feb:
+	for i in (1,0):
+		if i in fifth:
+			position=fifth.index(i)
+			out=out+str(i)+" "
+			fifth.pop(position)
+			sixth=fifth
+			break
+	
 
-#print(out)
+elif out[0:2] in month_odd:
+	for i in (9,8,7,6,5,4,3,2,1,0):
+		if i in fifth:
+			position=fifth.index(i)
+			out=out+str(i)+" "
+			fifth.pop(position)
+			sixth=fifth
+			break
+
+elif out[0:2]==month_feb:
+	for i in (8,7,6,5,4,3,2,1):
+		if i in fifth:
+			position=fifth.index(i)
+			out=out+str(i)+" "
+			fifth.pop(position)
+			sixth=fifth
+			break
+else:
+	for i in (9,8,7,6,5,4,3,2,1,0):
+		if i in fifth:
+			position=fifth.index(i)
+			out=out+str(i)+" "
+			fifth.pop(position)
+			sixth=fifth
+			break
+print(out)
+#print(sixth)
 
 for i in (2,1,0):
 	if i in sixth:

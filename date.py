@@ -2,7 +2,7 @@ first = input()
 #print(first)
 second=first.split(",")
 second=list(map(int,second))
-#print(second)
+print(second)
 
 third=list()
 fourth=list()
@@ -12,6 +12,22 @@ seventh=list()
 eight=list()
 nine=list()
 ten=list()
+
+b=[2,2,2]
+c=[0,0,0]
+d=[0,1,2]
+e=[1,1,1]
+f=[0,0,1]
+g=[0,1,1]
+h=[0,0,2]
+i=[0,2,2]
+j=[1,1,2]
+
+result = all(elem in second for elem in b) or all(elem in second for elem in c) or all(elem in second for elem in d) or all(elem in second for elem in e) or all(elem in second for elem in f) or all(elem in second for elem in f) or all(elem in second for elem in g) or all(elem in second for elem in h) or all(elem in second for elem in i) or all(elem in second for elem in j)
+
+if not result:
+	print(0)
+	exit()
 
 if 1 in second:
 	position=second.index(1)

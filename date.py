@@ -22,8 +22,12 @@ g=[0,1,1]
 h=[0,0,2]
 i=[0,2,2]
 j=[1,1,2]
+k=[0,0]
+l=[1,1]
+m=[2,2]
+n=[0,1]
 
-result = all(elem in second for elem in b) or all(elem in second for elem in c) or all(elem in second for elem in d) or all(elem in second for elem in e) or all(elem in second for elem in f) or all(elem in second for elem in f) or all(elem in second for elem in g) or all(elem in second for elem in h) or all(elem in second for elem in i) or all(elem in second for elem in j)
+result = all(elem in second for elem in b) or all(elem in second for elem in c) or all(elem in second for elem in d) or all(elem in second for elem in e) or all(elem in second for elem in f) or all(elem in second for elem in f) or all(elem in second for elem in g) or all(elem in second for elem in h) or all(elem in second for elem in i) or all(elem in second for elem in j) or all(elem in second for elem in k) or all(elem in second for elem in l) or all(elem in second for elem in m) or all(elem in second for elem in n)
 
 if not result:
 	print(0)

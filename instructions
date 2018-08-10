@@ -1,0 +1,28 @@
+# All the instructions below are for rhel7 and centos7 
+
+# To install dhcp server package :
+	yum install dhcp 
+
+# The main configuration file for dhcp is :
+	/etc/dhcpd/dhcp.conf
+
+# Start and enable the dhcp service :
+	systemctl start dhcpd
+	systemctl enable dhcpd 
+	
+# The example configuration file for dhcp : 
+	/usr/share/doc/dhcp-4.2.5/dhcpd.conf.example
+
+Copy example configuration file and then make necessary changes in it 
+	cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example /etc/dhcp/dhcpd.conf
+
+Then, make change in dhcpd.service file by copying from-to given below path first 
+	cp /usr/lib/systemd/system/dhcpd.service /etc/systemd/system/
+	vim /etc/systemd/system/dhcpd.service
+
+ExecStart=/usr/sbin/dhcpd -f -cf /etc/dhcp/dhcpd.conf -user dhcpd -group dhcpd --no-pid your_interface_name (ens33 in my case )
+	ExecStart=/usr/sbin/dhcpd -f -cf /etc/dhcp/dhcpd.conf -user dhcpd -group dhcpd --no-pid ens33
+
+Then, systemctl --system daemon-reload 
+      systemctl restart dhcpd 
+
